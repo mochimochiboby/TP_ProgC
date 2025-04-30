@@ -2,9 +2,11 @@
 
 int puissance(int a, int b){
 int i = 0;
+int resultat = 1;
   for (i; i < b; i++){
-    return a * a;
+    resultat *= a;
   }
+  return resultat;
 }
 
 int main (){
