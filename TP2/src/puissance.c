@@ -10,7 +10,7 @@ int resultat = 1;
 }
 
 int main (){
-  int resultat = puissance(8,8);
+  int resultat = puissance(2,4);
   printf("%d", resultat);
   return 0;
 }
