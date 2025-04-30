@@ -8,7 +8,7 @@ int i = 0;
 }
 
 int main (){
-  int resultat = puissance (8,8);
-  printf(resultat);
+  int resultat = puissance(8,8);
+  printf("Resultat =", resultat);
   return 0;
 }
