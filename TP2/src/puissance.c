@@ -11,6 +11,6 @@ int resultat = 1;
 
 int main (){
   int resultat = puissance(8,8);
-  printf("Resultat =", resultat);
+  printf(%d, resultat);
   return 0;
 }
