@@ -5,15 +5,15 @@
 #include <stdlib.h>
 
 // Fonction qui lit le contenu d'un répertoire
-void lire_dossier(const char nom_repertoire) {
-    DIRrep = opendir(nom_repertoire);
+void lire_dossier(const char *nom_repertoire) {
+    DIR *rep = opendir(nom_repertoire);
 
     if (rep == NULL) {
         perror("Erreur lors de l'ouverture du répertoire");
         return;
     }
 
-    struct dirent entree;
+    struct dirent *entree;
     while ((entree = readdir(rep)) != NULL) {
         printf("%s\n", entree->d_name);
     }
@@ -22,7 +22,7 @@ void lire_dossier(const char nom_repertoire) {
 }
 
 // Fonction main intégrée ici
-int main(int argc, charargv[]) {
+int main(int argc, char *argv[]) {
     if (argc != 2) {
         printf("Utilisation : %s <nom_du_repertoire>\n", argv[0]);
         return 1;
